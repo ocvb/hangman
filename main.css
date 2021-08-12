@@ -1,0 +1,49 @@
+body {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin: auto;
+    background: rgb(173, 223, 255);
+}
+img {
+    margin: auto;
+    display: none;
+}
+
+table {
+    text-align: center;
+    margin: auto;
+    background-color: rgb(147, 203, 255);
+    border-radius: 10px;
+}
+
+table caption {
+    font-size: 20px;
+    margin: 5px;
+}
+
+table tr td{
+    padding: 5px;
+}
+
+#screen input { text-align: center; width: 200px; }
+
+#numbers {text-align: right !important;}
+#numbers input{text-align: center; width: 20px;}
+
+#words input {
+    margin: 5px;
+}
+
+.letters { width: 24px;}
+
+button {
+    background-color: rgb(255, 255, 255);
+    border: 0px;
+    cursor: pointer;
+    padding: 7px;
+}
+button:hover {
+    background-color: rgb(236, 235, 235);
+}
+button:active {
+    box-shadow: 1px 2px 4px 0px grey;
+}
