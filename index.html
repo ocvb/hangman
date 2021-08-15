@@ -11,7 +11,7 @@
 
 <body>
     <div id="stickman">
-        <img class="image" src="images/stage1.png" alt="" style="display: block;">
+        <img class="image" src="images/stage1.png" style="display: block;" alt="" >
         <img class="image" src="images/stage2.png" alt="">
         <img class="image" src="images/stage3.png" alt="">
         <img class="image" src="images/stage4.png" alt="">
@@ -32,34 +32,34 @@
         </thead>
         <tbody>
             <tr>
-                <td colspan="1"><button class='letters' id="1">A</button></td>
-                <td><button class='letters' id="2">B</button></td>
-                <td><button class='letters' id="3">C</button></td>
-                <td><button class='letters' id="4">D</button></td>
-                <td><button class='letters' id="5">E</button></td>
-                <td><button class='letters' id="6">F</button></td>
-                <td><button class='letters' id="7">G</button></td>
-                <td><button class='letters' id="8">H</button></td>
-                <td><button class='letters' id="9">I</button></td>
-                <td><button class='letters' id="10">J</button></td>
-                <td><button class='letters' id="11">K</button></td>
-                <td><button class='letters' id="12">L</button></td>
-                <td><button class='letters' id="13">M</button></td>
+                <td colspan="1"><button class='letters' id="0">A</button></td>
+                <td><button class='letters' id="1">B</button></td>
+                <td><button class='letters' id="2">C</button></td>
+                <td><button class='letters' id="3">D</button></td>
+                <td><button class='letters' id="4">E</button></td>
+                <td><button class='letters' id="5">F</button></td>
+                <td><button class='letters' id="6">G</button></td>
+                <td><button class='letters' id="7">H</button></td>
+                <td><button class='letters' id="8">i</button></td>
+                <td><button class='letters' id="9">J</button></td>
+                <td><button class='letters' id="10">K</button></td>
+                <td><button class='letters' id="11">L</button></td>
+                <td><button class='letters' id="12">M</button></td>
             </tr>
             <tr>
-                <td colspan="1"><button class='letters' id="14">N</button></td>
-                <td><button class='letters' id="15">O</button></td>
-                <td><button class='letters' id="16">P</button></td>
-                <td><button class='letters' id="17">Q</button></td>
-                <td><button class='letters' id="18">R</button></td>
-                <td><button class='letters' id="19">S</button></td>
-                <td><button class='letters' id="20">T</button></td>
-                <td><button class='letters' id="21">U</button></td>
-                <td><button class='letters' id="22">V</button></td>
-                <td><button class='letters' id="23">W</button></td>
-                <td><button class='letters' id="24">X</button></td>
-                <td><button class='letters' id="25">Y</button></td>
-                <td><button class='letters' id="26">Z</button></td>
+                <td colspan="1"><button class='letters' id="13">N</button></td>
+                <td><button class='letters' id="14">O</button></td>
+                <td><button class='letters' id="15">P</button></td>
+                <td><button class='letters' id="16">Q</button></td>
+                <td><button class='letters' id="17">R</button></td>
+                <td><button class='letters' id="18">S</button></td>
+                <td><button class='letters' id="19">T</button></td>
+                <td><button class='letters' id="20">U</button></td>
+                <td><button class='letters' id="21">V</button></td>
+                <td><button class='letters' id="22">W</button></td>
+                <td><button class='letters' id="23">X</button></td>
+                <td><button class='letters' id="24">Y</button></td>
+                <td><button class='letters' id="25">Z</button></td>
             </tr>
             <!--<tr>
                 <td colspan="1"><button class='letters' id="A">A</button></td>
@@ -94,130 +94,7 @@
         </tbody>
 
     </table>
-    <script type="application/javascript">
-        window.onload = function () {
-            var alphabet = {
-                1: 'a', 2: 'b', 3: 'c', 4: 'd', 5: 'e', 6: 'f', 7: 'g', 8: 'h',
-                9: 'i', 10: 'j', 11: 'k', 12: 'l', 13: 'm', 14: 'n', 15: 'o',
-                16: 'p', 17: 'q', 18: 'r', 19: 's', 20: 't', 21: 'u', 22: 'v', 23: 'w',
-                24: 'x', 25: 'y', 26: 'z'
-            };
-
-            var scores = 0;
-            var fails = 0;
-            var set = [];
-            var setWords = [];
-            var guesses = [];
-            var letter = document.getElementsByClassName("letters");
-            var stickman = document.getElementsByClassName("image");
-            var display = document.getElementById("display");
-
-            function stick(re) {
-                stickman[re - 1].style.display = "none";
-                stickman[re].style.display = "block";
-            }
-            
-            function getBtn() {
-                function convert(k) { return alphabet[k] } // convert id to alphabet
-                function click() {
-                    for (var i = 0; i <= letter.length; i++) {
-                        if (this.id == i) {
-                            var l;
-                            var getStatus;
-                            buttonID = this.id;
-                            letterss = convert(this.id)
-                            document.getElementById(buttonID).disabled = true;
-                            guesses.push(letterss.toUpperCase() + "\n")
-                            document.getElementById("words").value = guesses;
-                            // console.log(letterss); // Show letters
-                            for (l = 0; l < word.length; l++) {
-                                // console.log(l); // array index
-                                // console.log(set[0][l] == letterss) // weather true or false
-                                getStatus = set[0][l] == letterss;
-                                if (getStatus !== false) {
-                                    setWords[l] = letterss;
-                                    document.getElementById("display").value = setWords.join(" ");
-                                }
-                            }   
-                            // console.log(setWords.indexOf(String(letterss))); // check if string is inside array
-                            if(setWords.indexOf(String(letterss)) == -1) {
-                                if(fails == 0) { fails++; stick(fails);}
-                                document.getElementById("fails").value = fails++;
-                                stick(fails);
-                            }
-                        }
-                    }
-                }
-
-                for (var r = 0; r < letter.length; r++) {
-                    letter[r].onclick = click;
-                } // get button
-            }
-
-            function checks() {
-                if (setWords.join(",") == set.join("")) {
-                    setWords = [];
-                    document.getElementById('words').value = "YOU WIN!";
-                    for (var r = 0; r < letter.length; r++) { letter[r].disabled = true;}
-                    scores++;
-                    document.getElementById("score").value = scores;
-                    
-                }
-                else if (fails > 6) {
-                    fails = 0;
-                    document.getElementById('words').value = "YOU LOST!";
-                    for (var r = 0; r < letter.length; r++) { letter[r].disabled = true; }
-                    stickman[5].style.display = "block";
-                    scores--;
-                    document.getElementById("score").value = scores;
-                    document.getElementById("display").value = set.join(" ");
-                }
-            }
-
-            function getWords() {
-                for (var i = 0; i < word.length; i++) {
-                    if (word[i] === "-") {
-                        document.getElementById("words").value = "-";
-                    } else {
-                        var hyfen = ["_"];
-                        document.getElementById("display").value = setWords.join(" ");
-                    }
-                    setWords.push(hyfen);
-                }
-                var breakdown = word.split("");
-                set.push(breakdown);
-            }
-            function reset() {
-                guesses = [];
-                set = [];
-                setWords = [];
-                display.value = '---HANGMAN---';
-                document.getElementById("fails").value = fails = 0;
-                for (var r = 0; r < letter.length; r++) {
-                    letter[r].disabled = false;
-                }
-                stickman[0].style.display = "block";
-            }
-
-            function start() {
-                words = ["mountain", "alien", "gladiator", "jaws"];
-                word = words[Math.floor(Math.random() * words.length)];
-                // word = word.replace(/\s/g, "-");
-
-                reset();
-                getWords();
-                getBtn();
-                setInterval(checks, 0);
-                console.log(set);
-            }
-
-            document.getElementById("start").addEventListener("click", function () {
-                document.getElementById("words").value = "";
-                for (var e = 0; e < stickman.length; e++) { stickman[e].style.display = "none"; }
-                start();
-            });
-        }
-    </script>
+    <script src="script.js"></script>
 </body>
 
 </html>

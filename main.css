@@ -1,18 +1,21 @@
 body {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     margin: auto;
-    background: rgb(173, 223, 255);
+    background: rgb(0, 0, 0);
+    margin-top: 50px;
 }
 img {
     margin: auto;
     display: none;
-}
+    background-color: rgb(65, 65, 65);
+    border-radius: 17px;
+} 
 
 table {
     text-align: center;
     margin: auto;
-    background-color: rgb(147, 203, 255);
-    border-radius: 10px;
+    background-color: rgb(190, 189, 189);
+    border-radius: 17px;
 }
 
 table caption {
@@ -42,7 +45,7 @@ button {
     padding: 7px;
 }
 button:hover {
-    background-color: rgb(236, 235, 235);
+    background-color: rgb(228, 228, 228);
 }
 button:active {
     box-shadow: 1px 2px 4px 0px grey;
